@@ -252,7 +252,9 @@ var TAG_DICT = {
     '(0008,9458)': {'tag': '(0008,9458)', 'vr': 'SQ', 'vm': '1', 'name': 'FrameDisplaySequence'},
     '(0008,9459)': {'tag': '(0008,9459)', 'vr': 'FL', 'vm': '1', 'name': 'RecommendedDisplayFrameRateInFloat'},
     '(0008,9460)': {'tag': '(0008,9460)', 'vr': 'CS', 'vm': '1', 'name': 'SkipFrameRangeFlag'},
-    '(0010,0010)': {'tag': '(0010,0010)', 'vr': 'PN', 'vm': '1', 'name': 'PatientName'},
+	// modified by Marco Barnig
+    '(0010,0010)': {'tag': '(0010,0010)', 'vr': 'PN', 'vm': '1', 'name': 'Clinical Case (PatientName)'},
+	// ************************
     '(0010,0020)': {'tag': '(0010,0020)', 'vr': 'LO', 'vm': '1', 'name': 'PatientID'},
     '(0010,0021)': {'tag': '(0010,0021)', 'vr': 'LO', 'vm': '1', 'name': 'IssuerOfPatientID'},
     '(0010,0022)': {'tag': '(0010,0022)', 'vr': 'CS', 'vm': '1', 'name': 'TypeOfPatientID'},
@@ -3560,6 +3562,20 @@ var TAG_DICT = {
     '(4010,1069)': {'tag': '(4010,1069)', 'vr': 'FL', 'vm': '1', 'name': 'TotalProcessingTime'},
     '(4010,106C)': {'tag': '(4010,106C)', 'vr': 'OB', 'vm': '1', 'name': 'DetectorCalibrationData'},
     '(4FFE,0001)': {'tag': '(4FFE,0001)', 'vr': 'SQ', 'vm': '1', 'name': 'MACParametersSequence'},
+    // private tags added by Marco Barnig
+    '(4321,0010)': {'tag': '(4321,0010)', 'vr': 'LO', 'vm': '1', 'name': 'PrivateCreator'},
+    '(4321,1010)': {'tag': '(4321,1010)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 1'},
+    '(4321,1011)': {'tag': '(4321,1011)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 2'},	
+    '(4321,1012)': {'tag': '(4321,1012)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 3'},
+    '(4321,1013)': {'tag': '(4321,1013)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 4'},
+    '(4321,1014)': {'tag': '(4321,1014)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 5'},
+    '(4321,1015)': {'tag': '(4321,1015)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 6'},
+    '(4321,1016)': {'tag': '(4321,1016)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 7'},
+    '(4321,1017)': {'tag': '(4321,1017)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 8'},
+    '(4321,1018)': {'tag': '(4321,1018)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 9'},
+    '(4321,1019)': {'tag': '(4321,1019)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Choice 10'},
+    '(4321,1020)': {'tag': '(4321,1020)', 'vr': 'LO', 'vm': '1', 'name': 'Diagnosis Answer'},	
+    // end of added private tags	
     '(50xx,0005)': {'tag': '(50xx,0005)', 'vr': 'US', 'vm': '1', 'name': 'CurveDimensions'},
     '(50xx,0010)': {'tag': '(50xx,0010)', 'vr': 'US', 'vm': '1', 'name': 'NumberOfPoints'},
     '(50xx,0020)': {'tag': '(50xx,0020)', 'vr': 'CS', 'vm': '1', 'name': 'TypeOfData'},
