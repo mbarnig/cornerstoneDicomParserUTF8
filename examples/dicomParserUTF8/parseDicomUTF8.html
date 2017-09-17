@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Parse DICOM File with UTF8 character set</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=yes, width = device-width, initial-scale = 1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="radiologic-72x72.png" />
+    <script src="dataDictionary.js"></script>
+    <script type="text/javascript" src="../../dist/cornerstoneDicomParserUTF8.min.js"></script> 
+    <style>
+    </style>
+    <script>
+      function selectFile(files) {
+        const selectedFile = files[0];
+        const reader = new FileReader();
+        const tags = [
+		  'x00080005',
+          'x00081030',
+          'x0008103e',
+          'x00100010',
+		  'x00104000',
+          'x00080090',
+          'x00321032',
+          'x00700084',
+          'x00402008',
+          'x00404037',
+          'x00081070',
+          'x00142006',
+          'x43210010',
+          'x43211010',
+          'x43211011',
+          'x43211012',
+          'x43211013',
+          'x43211014'
+        ];
+        reader.readAsArrayBuffer(selectedFile);
+        reader.onload = function(event) {
+          const dicomPart10AsArrayBuffer = reader.result;                
+          const byteArray = new Uint8Array(dicomPart10AsArrayBuffer);
+          try {
+            const dataSet = dicomParser.parseDicom(byteArray);
+            let output = '<ul>';
+            let item = '';
+            for (let i = 0; i < tags.length; i++) {
+              item = getTag(tags[i]);
+              output += '<li>' + item.tag + ' -> ' + item.name + ' : ' + dataSet.string(tags[i]) + '</li>';
+            } // end for i 
+            output += '</ul>';
+            document.getElementById('dicomContent').innerHTML = output;
+          } catch (err) {
+            console.log(`DicomParsing Error: ${err}`);
+            alert(`DicomParsing Error: ${err}`);
+          } // end try catch
+        }; // end reader.onload
+			  
+        reader.onerror = function(err) {
+          alert(`Reading Error: $(err)`);
+        };  // end reader.onerror
+			  
+      }  // end function selectFile(file)
+			
+      function getTag(tag) {
+        var group = tag.substring(1,5);
+        var element = tag.substring(5,9);
+        var tagIndex = ("("+group+","+element+")").toUpperCase();
+        var attr = TAG_DICT[tagIndex];
 
+        return attr;
+      } // end function getTag	
+	
+    </script>
+  </head>
+  <body>
+    <h2>Parse DICOM File with UTF8 character set</h2> 
+    <input type="file" id="select-file" onchange="selectFile(this.files)" />
+    <div id="dicomContent"></div>
+  </body>
+</html>
