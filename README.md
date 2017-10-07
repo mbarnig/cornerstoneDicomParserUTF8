@@ -14,17 +14,17 @@ The following screenshots show the parsing of a RadioLogic test DICOM file, enco
 
 The first figure shows the display panel of the [parseDicomUTF8 Demo](https://www.radiologic.fr/cornerstoneDicomParserUTF8/examples/dicomParserUTF8/parseDicomUTF8.html) by using the enhanced dicomParser called **cornerstoneDicomParserUTF8**.
 
-![figure1](https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/demoUTF8.PNG)
+<kbd><img src="https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/demoUTF8.PNG" width="768" /></kbd>
 
 The second figure shows the [same demo](https://www.radiologic.fr/cornerstoneDicomParserUTF8/examples/dicomParserUTF8/parseDicom.html) by using the standard dicomParser v1.7.5.
 
-![figure2](https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/demoNoUTF8.PNG)
+<kbd><img src="https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/demoNoUTF8.PNG" width="768" /></kbd>
 
 The third and fourth figures show the results of the modified demo [dumpWithDataDictionary](https://www.radiologic.fr/cornerstoneDicomParserUTF8/examples/dumpWithDataDictionary/index.html) v1.7.5 for use on tablets.
 
-![figure3](https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/dumpIcloud.PNG)
+<kbd><img src="https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/dumpIcloud.PNG" width="768" /></kbd>
 
-![figure4](https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/dumpUTF8.PNG)
+<kbd><img src="https://github.com/mbarnig/cornerstoneDicomParserUTF8/blob/master/images/dumpUTF8.PNG" width="768" /></kbd>
 
 The [radiolodic.dcm](https://www.radiologic.fr/cornerstoneDicomParserUTF8/testfiles/radiologic.dcm) testfile is available with the preceding link or in this repository's **testfiles folder**.
 
