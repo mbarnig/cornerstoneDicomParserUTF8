@@ -1,5 +1,6 @@
-docs
 examples
-node-modules
+images
+meteor
+node_modules
 test
-testimages
+testImages
