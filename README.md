@@ -8,6 +8,6 @@ In a first step I succesfully patched [Chris Hafey](https://github.com/chafey)'s
 
 In a second step I modified the source files to document the changes and to build new distribution files. This approach is described in the present wiki page [First Approach](https://github.com/mbarnig/cornerstoneDicomParserUTF8/wiki/First-Approach).
 
-Following feedback from Chris Hafey and the [cornerstone-platform communinity](https://groups.google.com/forum/#!topic/cornerstone-platform/RyhpMVeW0Ls), I am currently creating a separate decoding module to support not only UTF8, but also other DICOM character set encodings.
+Following feedback from Chris Hafey and the [cornerstone-platform community](https://groups.google.com/forum/#!topic/cornerstone-platform/RyhpMVeW0Ls), I am currently creating a separate decoding module to support not only UTF8, but also other DICOM character set encodings.
 
  
